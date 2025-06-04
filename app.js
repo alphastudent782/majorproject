@@ -3,7 +3,7 @@
  }
 const express = require("express");
 const app = express();
-const port = 8080;
+const port = 10000;
 const mongoose = require("mongoose");
 const path = require("path");
 const Listing = require("./models/listing.js");
