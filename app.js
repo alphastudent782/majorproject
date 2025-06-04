@@ -1,6 +1,6 @@
-if(process.env.NODE_ENV != "production"){
-    require('dotenv').config();
-}
+ if(process.env.NODE_ENV != "production"){
+     require('dotenv').config();
+ }
 const express = require("express");
 const app = express();
 const port = 8080;
@@ -28,7 +28,7 @@ const user = require("./routes/user.js");
 
 // const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
 
-const dbURL = process.env.ATLASDB_URL;
+ const dbURL = process.env.ATLASDB_URL;
 
 
 
@@ -49,7 +49,7 @@ app.engine('ejs',ejsMate);
 
 
 const store = MongoStore.create({
-    mongoUrl : dbURL,
+    mongoUrl : MONGO_URL,
     crypto:{
         secret:process.env.SECRET,
         
